@@ -10,10 +10,10 @@ export default function Home() {
     const [input, setInput] = useState('');
 
     const handleSendMessage = async () => {
-        
+
         if (input !== '') {
             try {
-                const text=input
+                const text = input
                 setInput('')
                 setMessages([
                     ...messages, { role: 'user', content: text }

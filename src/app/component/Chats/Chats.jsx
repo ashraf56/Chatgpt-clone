@@ -11,8 +11,8 @@ const Chats = ({ msg }) => {
                             <div className="bg-neutral text-neutral-content rounded-full w-8">
                                 <span className="text-neutral-content">A</span>
                             </div>
-                        </div> 
-                        : 
+                        </div>
+                        :
                         <Image src={imf} width={50} height={50} alt='i' className='rounded-full' />}</div>
                     <p>{msg.content}</p>
                 </div>
