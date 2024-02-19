@@ -10,10 +10,16 @@ export default function Home() {
     const [input, setInput] = useState('');
 
     const handleSendMessage = async () => {
+        
         if (input !== '') {
             try {
-                const response = await main(input);
-                setMessages([...messages, { role: 'user', content: input }, { role: 'assistant', content: response }]);
+                const text=input
+                setInput('')
+                setMessages([
+                    ...messages, { role: 'user', content: text }
+                ])
+                const response = await main(text);
+                setMessages([...messages, { role: 'user', content: text }, { role: 'assistant', content: response }]);
                 setInput('');
             } catch (error) {
                 console.error('Error:', error);
@@ -30,13 +36,13 @@ export default function Home() {
             <div className="flex  flex-col items-center justify-between relative ">
 
 
-                <div className={`w-full px-10 h-[450px] ${messages.length === 0 ? '' : 'scrollbar-thin  overflow-y-scroll'} `}>
+                <div className={`w-full mt-5 h-[450px] ${messages.length === 0 ? '' : 'scrollbar-thin  overflow-y-scroll'} `}>
                     {messages?.map((msg, index) => (
                         <Chats key={index} msg={msg} />
                     ))}
                 </div>
                 <div className="fixed bottom-4 text-center">
-                    <div className="flex mx-10 text-center w-[600px] px-3 my-5 items-center rounded-2xl border ">
+                    <div className="flex mx-10 text-center w-[300px] lg:w-[600px] px-3 my-5 items-center rounded-2xl border ">
                         <input
                             type="text"
                             value={input}
