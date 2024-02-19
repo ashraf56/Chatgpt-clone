@@ -4,6 +4,7 @@ import main from "@/utill/gpt";
 import { useState } from "react";
 import Topnav from "./component/Topnav/Topnav";
 import { FaArrowUp } from "react-icons/fa";
+import Welcome from "./component/Welcome/Welcome";
 export default function Home() {
 
     const [messages, setMessages] = useState([]);
@@ -37,7 +38,7 @@ export default function Home() {
 
 
                 <div className={`w-full mt-5 h-[450px] ${messages.length === 0 ? '' : 'scrollbar-thin  overflow-y-scroll'} `}>
-                    {messages?.map((msg, index) => (
+                    {messages.length === 0 ? <Welcome></Welcome>:messages?.map((msg, index) => (
                         <Chats key={index} msg={msg} />
                     ))}
                 </div>
