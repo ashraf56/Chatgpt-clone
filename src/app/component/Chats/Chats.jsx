@@ -13,7 +13,7 @@ const Chats = ({ msg }) => {
                             </div>
                         </div>
                         :
-                        <Image src={imf} width={50} height={50} alt='i' className='rounded-full w-8' />}</div>
+                        <Image src={imf} width={50} height={50} alt='i'  />}</div>
                     <p>{msg.content}</p>
                 </div>
             </div>
