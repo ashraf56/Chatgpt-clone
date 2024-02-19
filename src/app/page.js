@@ -50,7 +50,7 @@ export default function Home() {
                             placeholder="Type your message..."
                             className="h-11 bg-transparent  w-full  max-w-3xl  outline-0"
                         />
-                        <button className="btn btn-ghost" disabled={input === ''} onClick={handleSendMessage}><FaArrowUp /></button>
+                        <button className="btn btn-ghost btn-sm" disabled={input === ''} onClick={handleSendMessage}><FaArrowUp /></button>
 
                     </div>
                     <span className="text-xs">ChatGPT can make mistakes. Consider checking important information.</span>

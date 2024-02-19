@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
 
-            <ul className="menu p-4 w-60 min-h-full bg-base-300  text-base-content text-md">
+            <ul className="menu p-4 w-60 min-h-full bg-base-300  text-base-content text-md relative">
               <div className="flex justify-between items-center pb-4">
                 <div className="flex items-center gap-2">
                   <Image src={img} width={30} height={30} alt="i" className="rounded-full"></Image>
@@ -45,7 +45,16 @@ export default function RootLayout({ children }) {
                 <li><a>What is function expr...</a></li>
                 <li><a>Today is November 25,...</a></li>
               </div>
-
+              <div className="absolute bottom-4">
+                <div className="flex items-center gap-2">
+                  <div className="avatar placeholder">
+                    <div className="bg-neutral text-neutral-content rounded-full w-8">
+                      <span className="text-neutral-content">A</span>
+                    </div>
+                  </div>
+                  <p>Ashraful Islam  </p>
+                </div>
+              </div>
 
             </ul>
 
