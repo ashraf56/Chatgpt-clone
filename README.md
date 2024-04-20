@@ -8,6 +8,7 @@
 - Next js
 - React
 - Daisy ui
+- GPT Api
 
 # Note
   Only chat option is Functional here.  Other sections are static for now.
